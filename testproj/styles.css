@@ -1,0 +1,47 @@
+.blue  {
+    color: black;
+}
+
+h1 {
+    color: red;
+    font-family:'Courier New', Courier, monospace;
+}
+
+p {
+    color: blue;
+}
+
+a {
+    color: cyan;
+}
+
+p1 {
+    color: green;
+}
+
+body {
+    background-color: black;
+}
+
+label {
+    color: white;
+}
+
+.shake {
+    animation: shake .5s;
+}
+
+@keyframes shake {
+    25% { transform: translateX(4);}
+    50% { transform: translateX(-4);}
+    75% { transform: translateX(4);}
+}
+
+.drop {
+    animation: drop 1s ease forwards;
+}
+
+@keyframes drop {
+    from {transform: translateY(-500px);}
+    to { transform: translateY(0px);}
+}
