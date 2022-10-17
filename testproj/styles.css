@@ -5,10 +5,20 @@
 h1 {
     color: red;
     font-family:'Courier New', Courier, monospace;
+    animation: drop-in 1s ease 0s forwards;
+    align-items: center;
 }
 
-p {
-    color: blue;
+@keyframes drop-in {
+    100% {
+        transform: translateY(0%);
+    }
+    50% {
+        transfrom: translateY(5%);
+    }
+    0% {
+        transform: translateY(-100%)
+    }
 }
 
 a {
@@ -16,32 +26,60 @@ a {
 }
 
 p1 {
-    color: green;
+    align-items: center;
 }
 
 body {
-    background-color: black;
+    background-color: white;
 }
 
 label {
     color: white;
 }
 
-.shake {
-    animation: shake .5s;
+.web {
+    border-radius: 5%;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 10px -2px var(--boxshadowcolor);
+    width: 280px;
+    margin-left: 10px;
+    transition: 0.3s ease-in;
+    animation: whoosh 1s ease 0s forwards;
+}
+.tenpxleft {
+    margin-left: 10px;
 }
 
-@keyframes shake {
-    25% { transform: translateX(4);}
-    50% { transform: translateX(-4);}
-    75% { transform: translateX(4);}
+.web:hover {
+    background-color: black;
+    color: white;
 }
 
-.drop {
-    animation: drop 1s ease forwards;
+@keyframes whoosh {
+    100% {
+        transform: translateX(0%);
+        box-shadow: 10px 10px 5px -2px;
+    }
+    50% {
+        transform: translateX(5%);
+    }
+    0% {
+        transform: translateX(-100%);
+    }
 }
 
-@keyframes drop {
-    from {transform: translateY(-500px);}
-    to { transform: translateY(0px);}
+.popup {
+    animation: popup 1s ease 0s forwards;
+}
+
+@keyframes popup {
+    100% {
+        transform: scale(100%)
+    }
+    50% {
+        transform: scale(105%)
+    }
+    0% {
+        transform: scale(0%)
+    }
 }
