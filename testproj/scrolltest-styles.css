@@ -1,0 +1,56 @@
+.box {
+    background-color: blue;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px -2px;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease;
+    animation: popdown 2s ease 0s forwards;
+    display: table;
+    margin: auto;
+}
+
+.box:hover {
+    width: 110px;
+    height: 110px;
+    box-shadow: 15px 15px 10px -2px;
+    background-color: blueviolet;
+}
+
+button {
+    animation: popup 2s ease 0s forwards;
+    margin-top: 30px;
+    background-color: blue;
+    background-image: linear-gradient(to left, blue, blue);
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px -2px;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease;
+    display: table;
+    margin: auto;
+}
+
+@keyframes popup {
+    100% {
+        transform: translateY(25%);
+    }
+    50% {
+        transform: translateY(15%);
+    }
+    0% {
+        transform: translateY(500%)
+    }
+}
+
+@keyframes popdown {
+    0% {
+        transform: translateY(-500%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0%)
+    }
+}

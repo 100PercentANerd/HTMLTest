@@ -6,6 +6,10 @@ h1 {
     text-underline-offset: 8px;
 }
 
+h1:hover {
+    color: white;
+}
+
 .title {
     color: black;
     font-family:'Courier New', Courier, monospace;
@@ -48,7 +52,10 @@ p1 {
 }
 
 body {
-    background-color: white;
+    background-image: url("https://imgs.search.brave.com/S_LEVdLibSFKr44mLv7pXrYJZM1AZFeP2zgn4lqsQAo/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/MEQ1N3NzRFB3cFly/Ym9xMTBZeFpBSGFF/byZwaWQ9QXBp");
+    background-repeat: no-repeat;
+    background-size: 1570px 770px;
+
 }
 
 label {
@@ -75,6 +82,7 @@ label {
     background-color: black;
     color: white;
     margin: 0 auto;
+    border-radius: 2%;
 }
 
 @keyframes whoosh {
@@ -93,6 +101,7 @@ label {
 .popup {
     animation: popup 1s ease 0s forwards;
     color: black;
+    font-family: monospace;
 }
 
 @keyframes popup {
@@ -108,16 +117,28 @@ label {
 }
 
 .ednamode {
+    opacity: 0.5;
     margin: 0 auto;
+    background-color: antiquewhite;
     max-width: 450px;
     min-width: 400px;
-    transition: 0.3s ease
+    transition: 0.3s ease;
+    transition: border-radius 1s ease;
+    transition: background-color 1.5s ease;
+    border-radius: 0%;
+    box-shadow: 10px 10px 5px -2px;
+}
+
+.ednainedna:hover {
+    opacity: 1;
 }
 
 .ednamode:hover {
     transform: scale(110%);
-    box-shadow: 10px 10px 5px -2px;
+    box-shadow: 15px 15px 10px -2px;
     background-color: antiquewhite;
+    border-radius: 5%;
+    opacity: 100%;
 }
 
 .socials {
@@ -128,28 +149,15 @@ label {
     --color1: aquamarine;
     color: var(--color1);
     box-shadow: 7px 7px 0px -2px;
+    border: 10px black;
+    border-radius: 10%;
 }
 
 .socials:hover {
     --color1: black;
     transform: scale(120%);
     box-shadow: 15px 15px 10px -2px;
-    background-color: aquamarine;
+    background-color: white;
     color: var(--color1);
-    border-radius: 50%;
-}
-
-.ball {
-    border-radius: 50%;
-    background-color: blueviolet;
-    width: 50px;
-    height: 50px;
-    transition: 0.3s ease;
-}
-
-.ball:hover {
-    border-radius: 55%;
-    transform: scale(120%);
-    transform: translateY(-20px);
-    box-shadow: 15px 15px 10px -2px;
+    border: 0px black;
 }
