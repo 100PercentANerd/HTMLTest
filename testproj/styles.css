@@ -4,10 +4,13 @@
 
 h1 {
     text-underline-offset: 8px;
+    transition: 0.3s;
 }
 
 h1:hover {
-    color: white;
+    background: linear-gradient(to left, palegoldenrod, hotpink);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .title {
@@ -118,7 +121,7 @@ label {
 
 .ednamode {
     opacity: 0.5;
-    margin: 0 auto;
+    margin: 35px auto;
     background-color: antiquewhite;
     max-width: 450px;
     min-width: 400px;
@@ -143,7 +146,7 @@ label {
 
 .socials {
     display: table;
-    margin: 0 auto;
+    margin: 50px auto;
     transition: 0.3s ease;
     background-color: white;
     --color1: aquamarine;
@@ -157,7 +160,37 @@ label {
     --color1: black;
     transform: scale(120%);
     box-shadow: 15px 15px 10px -2px;
-    background-color: white;
     color: var(--color1);
     border: 0px black;
+}
+
+section.container {
+    width: 20rem;
+    height: 20rem;
+    background: white;
+    display: flex;
+    overflow-x: scroll;
+    margin: 150px auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 10%;
+}
+
+section.container div {
+    min-width: 19rem;
+    max-width: 20rem;
+    height: 19rem;
+    color: white;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    border: solid #000;
+    border-width: 0 1px;
+    scroll-snap-align: center;
+    background: #000;
+}
+
+html {
+    scroll-behavior: smooth;
 }
